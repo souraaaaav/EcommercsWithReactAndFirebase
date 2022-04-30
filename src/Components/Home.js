@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { auth } from '../Config/Config';
 import { Navbar } from './Navbar';
-import { Products } from './Products'
-import { useHistory } from 'react-router-dom'
-import { auth } from '../Config/Config'
+import { Products } from './Products';
 
 export const Home = ({ user }) => {
 
@@ -18,9 +18,12 @@ export const Home = ({ user }) => {
     })
 
     return (
-        <div className='wrapper'>
-            <Navbar user={user} />
-            <Products />
-        </div>
+        <>
+            <div className='wrapper'>
+                <Navbar user={user} />
+                <Products />
+            </div>
+        </>
+
     )
 }

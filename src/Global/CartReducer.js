@@ -30,6 +30,15 @@ export const CartReducer = (state, action) => {
                 return state;
             }
             else {
+                toast.info('this product added on your card', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                });
                 product = action.product;
                 product['qty'] = 1;
                 product['TotalProductPrice'] = product.ProductPrice * product.qty;

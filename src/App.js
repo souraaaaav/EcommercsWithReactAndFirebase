@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import { ProductsContextProvider } from './Global/ProductsContext'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { AddProducts } from './Components/AddProducts'
+import { Cart } from './Components/Cart'
+import { Cashout } from './Components/Cashout'
 import { Home } from './Components/Home'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { Signup } from './Components/Signup'
 import { Login } from './Components/Login'
 import { NotFound } from './Components/NotFound'
+import { Signup } from './Components/Signup'
+import TermsAndCondition from './Components/TermsAndCondition'
 import { auth, db } from './Config/Config'
 import { CartContextProvider } from './Global/CartContext'
-import { Cart } from './Components/Cart'
-import { AddProducts } from './Components/AddProducts'
-import { Cashout } from './Components/Cashout'
+import { ProductsContextProvider } from './Global/ProductsContext'
 
 export class App extends Component {
 
@@ -55,6 +56,7 @@ export class App extends Component {
                             <Route path="/addproducts" component={AddProducts} />
                             {/* cashout */}
                             <Route path='/cashout' component={() => <Cashout user={this.state.user} />} />
+                            <Route path='/termsandcondition' component={TermsAndCondition} />
                             <Route component={NotFound} />
                         </Switch>
                     </BrowserRouter>
