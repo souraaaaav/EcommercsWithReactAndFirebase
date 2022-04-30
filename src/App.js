@@ -4,6 +4,7 @@ import { AddProducts } from './Components/AddProducts'
 import { Cart } from './Components/Cart'
 import { Cashout } from './Components/Cashout'
 import { Home } from './Components/Home'
+import Invoice from './Components/Invoice'
 import { Login } from './Components/Login'
 import { NotFound } from './Components/NotFound'
 import { Signup } from './Components/Signup'
@@ -57,6 +58,7 @@ export class App extends Component {
                             {/* cashout */}
                             <Route path='/cashout' component={() => <Cashout user={this.state.user} />} />
                             <Route path='/termsandcondition' component={TermsAndCondition} />
+                            <Route path='/invoice' component={Invoice} />
                             <Route component={NotFound} />
                         </Switch>
                     </BrowserRouter>
