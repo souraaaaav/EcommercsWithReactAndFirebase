@@ -21,7 +21,7 @@ export const Navbar = ({ user }) => {
     return (
         <div className='navbox'>
             <Link to="/" >
-                <h3 style={{ color: '#41c7b5' }}>Nusrat E-commerce</h3>
+                <h3 style={{ color: '#41c7b5' }}>uptown</h3>
             </Link>
             <div className='leftside'>
                 <Link to="/">

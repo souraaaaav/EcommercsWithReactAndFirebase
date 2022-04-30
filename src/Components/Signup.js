@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { auth, db } from '../Config/Config'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { auth, db } from '../Config/Config';
 
 export const Signup = (props) => {
 
@@ -24,6 +25,15 @@ export const Signup = (props) => {
                 setPassword('');
                 setError('');
                 props.history.push('/login');
+                toast.info('registration successful. Please Login with your credintials', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                });
             }).catch(err => setError(err.message));
         }).catch(err => setError(err.message));
     }

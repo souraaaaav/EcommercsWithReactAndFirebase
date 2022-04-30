@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Payment.css'
 const Payment = ({ totalPrice }) => {
-
+    const newPrice = totalPrice + '$'
     return (
         <>
             <div class='card-checkout'>
@@ -30,7 +30,7 @@ const Payment = ({ totalPrice }) => {
                     </div>
                     <label>Total bill</label>
                     <div class='input-group'>
-                        <input class='form-control' type='text' placeholder={totalPrice} disabled />
+                        <input class='form-control' type='text' placeholder={newPrice} disabled />
                     </div>
                     <br />
                     <Link to='cashout' className='cashout-link'>

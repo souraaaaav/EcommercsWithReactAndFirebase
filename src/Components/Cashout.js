@@ -57,6 +57,7 @@ export const Cashout = (props) => {
         })
     }
 
+
     return (
         <>
             <Navbar user={props.user} />

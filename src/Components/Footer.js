@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <section class="footer">
             <div class="footer-container container">
-                <h2>Nusrat E-commerce</h2>
+                <h2>uptown</h2>
                 <div class="footer-box">
 
                     <a href="https://www.facebook.com/rj.neon.9"><i class="bx bxl-facebook"></i></a>
