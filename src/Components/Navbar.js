@@ -4,7 +4,7 @@ import { cart } from 'react-icons-kit/entypo/cart'
 import { Link, useHistory } from 'react-router-dom'
 import { auth } from '../Config/Config'
 import { CartContext } from '../Global/CartContext'
-import logo from '../images/ecommerce.svg'
+import logo from '../images/uptownLogo.png'
 
 export const Navbar = ({ user }) => {
 
